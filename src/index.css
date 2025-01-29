@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: var(--tg-theme-bg-color);
+    --foreground: var(--tg-theme-text-color);
+ 
+    --card: var(--tg-theme-section-bg-color);
+    --card-foreground: var(--tg-theme-text-color);
+
+    --popover: var(--tg-theme-section-bg-color);
+    --popover-foreground: var(--tg-theme-text-color);
+  
+    --primary: var(--tg-theme-button-color);
+    --primary-foreground: var(--tg-theme-button-text-color);
+ 
+    --secondary: var(--tg-theme-secondary-bg-color);
+    --secondary-foreground: var(--tg-theme-text-color);
+ 
+    --muted: var(--tg-theme-hint-color);
+    --muted-foreground: var(--tg-theme-hint-color);
+ 
+    --accent: var(--tg-theme-accent-text-color);
+    --accent-foreground: hsl(0 0% 98%);
+ 
+    --destructive: var(--tg-theme-destructive-text-color);
+    --destructive-foreground: hsl(0 0% 98%);
+
+    --ton: 199 92% 56%;
+    --ton-foreground: 0 0% 100%;
+
+    --border: 0, 0%, 0%, 0.04;
+    --input: 0, 0%, 0%, 0.04;
+    --ring: 0 0% 3.9%;
+
+    --tg-viewport-safe-area-inset-top: 0.5rem;
+    --tg-viewport-content-safe-area-inset-top: 0;
+    --tg-viewport-safe-area-inset-bottom: 1rem;
+
+    --tg-viewport-height: 1dvh;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    line-height: 140%;;
+  }
+
+  input[type="time"],
+  input[type="date"],
+  input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  * {    
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+  }
+}
