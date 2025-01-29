@@ -5,3 +5,7 @@
 
 ```npm install```
 ```npm run build```
+
+## Run project
+```yarn```
+```yarn dev```
