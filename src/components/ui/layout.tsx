@@ -4,6 +4,7 @@ import { create } from "zustand";
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@/hooks/use-media-query";
+import { Nav } from "./nav";
 
 export interface LayoutStoreProps {
   bgImage?: ReactNode;
@@ -52,6 +53,8 @@ export const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
         )}
         {children}
       </div>
+
+      <Nav />
     </div>
   );
 };
