@@ -40,7 +40,7 @@ export const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="w-full max-w-md flex flex-col relative pt-[var(--tg-viewport-safe-area-inset-top)]">
         {!isHeaderDisabled && <Header />}
         
-        <main className="flex-1 overflow-auto overflow-x-hidden relative z-10 px-4 pb-[calc(3.5rem+var(--tg-viewport-safe-area-inset-bottom))]">
+        <main className="flex-1 overflow-auto overflow-x-hidden relative z-10 pb-20">
           {bgImage && (
             <div
               className={cn(

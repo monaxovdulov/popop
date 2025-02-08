@@ -20,25 +20,27 @@ export function Nav() {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 flex justify-center bg-background z-50">
-      <nav className="w-full max-w-md bg-card border-t border-border flex justify-around items-center h-14 pb-[var(--tg-viewport-safe-area-inset-bottom)]">
-        {navItems.map(({ path, icon: Icon, label }) => {
-          const isActive = location.pathname === path;
-          
-          return (
-            <Link
-              key={path}
-              to={path}
-              className={cn(
-                "flex flex-col items-center justify-center w-full h-full gap-0.5 active:opacity-60",
-                isActive ? "text-primary" : "text-muted-foreground"
-              )}
-            >
-              <Icon className="w-5 h-5" />
-              <span className="text-xxs font-medium">{label}</span>
-            </Link>
-          );
-        })}
+    <div className="fixed bottom-0 left-0 right-0 flex justify-center z-50">
+      <nav className="w-full max-w-md flex justify-around items-center h-[72px] pb-[var(--tg-viewport-safe-area-inset-bottom)] px-4">
+        <div className="w-full bg-black/40 backdrop-blur-md rounded-full flex justify-around items-center h-14">
+          {navItems.map(({ path, icon: Icon, label }) => {
+            const isActive = location.pathname === path;
+            
+            return (
+              <Link
+                key={path}
+                to={path}
+                className={cn(
+                  "flex flex-col items-center justify-center gap-0.5 px-2 py-1 rounded-full transition-colors",
+                  isActive ? "text-white" : "text-white/60 hover:text-white/80"
+                )}
+              >
+                <Icon className="w-5 h-5" />
+                <span className="text-[10px] font-medium">{label}</span>
+              </Link>
+            );
+          })}
+        </div>
       </nav>
     </div>
   );
