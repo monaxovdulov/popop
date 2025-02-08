@@ -1,3 +1,13 @@
+import { useGameStore } from "@/stores/game-store";
+import { CharacterSelect } from "./components/character-select";
+import { GameScreen } from "./components/game-screen";
+
 export const GamePage = () => {
-  return <div className="relative z-10 flex-1 flex flex-col">Hello</div>;
+  const { character, setCharacter } = useGameStore();
+
+  if (!character) {
+    return <CharacterSelect onSelect={setCharacter} />;
+  }
+
+  return <GameScreen character={character} />;
 };

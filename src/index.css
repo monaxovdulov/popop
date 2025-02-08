@@ -4,42 +4,44 @@
 
 @layer base {
   :root {
-    --background: var(--tg-theme-bg-color);
-    --foreground: var(--tg-theme-text-color);
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
  
-    --card: var(--tg-theme-section-bg-color);
-    --card-foreground: var(--tg-theme-text-color);
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-    --popover: var(--tg-theme-section-bg-color);
-    --popover-foreground: var(--tg-theme-text-color);
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
   
-    --primary: var(--tg-theme-button-color);
-    --primary-foreground: var(--tg-theme-button-text-color);
+    --primary: 142 69% 58%;
+    --primary-foreground: 210 40% 98%;
  
-    --secondary: var(--tg-theme-secondary-bg-color);
-    --secondary-foreground: var(--tg-theme-text-color);
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
  
-    --muted: var(--tg-theme-hint-color);
-    --muted-foreground: var(--tg-theme-hint-color);
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
  
-    --accent: var(--tg-theme-accent-text-color);
-    --accent-foreground: hsl(0 0% 98%);
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
  
-    --destructive: var(--tg-theme-destructive-text-color);
-    --destructive-foreground: hsl(0 0% 98%);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
     --ton: 199 92% 56%;
     --ton-foreground: 0 0% 100%;
 
-    --border: 0, 0%, 0%, 0.04;
-    --input: 0, 0%, 0%, 0.04;
-    --ring: 0 0% 3.9%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142 69% 58%;
 
     --tg-viewport-safe-area-inset-top: 0.5rem;
     --tg-viewport-content-safe-area-inset-top: 0;
     --tg-viewport-safe-area-inset-bottom: 1rem;
 
     --tg-viewport-height: 1dvh;
+
+    --radius: 0.5rem;
   }
 
   * {

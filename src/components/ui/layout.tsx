@@ -29,32 +29,33 @@ export const useLayoutStore = create<LayoutStoreProps & LayoutStoreActions>(
 );
 
 export const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
-  const { bgColor, bgImage, isHeaderDisabled } =
-    useLayoutStore();
-
+  const { bgColor, bgImage, isHeaderDisabled } = useLayoutStore();
   const isHeightTale = useMediaQuery("(min-height: 680px)");
 
   return (
     <div
       style={{ backgroundColor: bgColor }}
-      className="h-dvh flex relative flex-col pt-[var(--tg-viewport-safe-area-inset-top)]"
+      className="min-h-dvh w-full flex justify-center bg-background"
     >
-      {!isHeaderDisabled && <Header />}
-      <div className="container pb-4 flex-1 overflow-auto overflow-x-hidden relative z-10 max-w-lg flex flex-col">
-        {bgImage && (
-          <div
-            className={cn(
-              "absolute opacity-50 -left-1 -right-1 -top-[var(--tg-viewport-content-safe-area-inset-top)]",
-              !isHeightTale && "-top-16"
-            )}
-          >
-            {bgImage}
-          </div>
-        )}
-        {children}
-      </div>
+      <div className="w-full max-w-md flex flex-col relative pt-[var(--tg-viewport-safe-area-inset-top)]">
+        {!isHeaderDisabled && <Header />}
+        
+        <main className="flex-1 overflow-auto overflow-x-hidden relative z-10 px-4 pb-[calc(3.5rem+var(--tg-viewport-safe-area-inset-bottom))]">
+          {bgImage && (
+            <div
+              className={cn(
+                "absolute opacity-50 -left-1 -right-1 -top-[var(--tg-viewport-content-safe-area-inset-top)]",
+                !isHeightTale && "-top-16"
+              )}
+            >
+              {bgImage}
+            </div>
+          )}
+          {children}
+        </main>
 
-      <Nav />
+        <Nav />
+      </div>
     </div>
   );
 };

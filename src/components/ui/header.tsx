@@ -4,10 +4,20 @@ export const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="container max-w-lg pt-[var(--tg-viewport-content-safe-area-inset-top)]">
-      <header className="pt-1 pb-4 flex items-center justify-between relative">
-        {t("header")}
-      </header>
-    </div>
+    <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur">
+      <div className="px-4 py-3 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <img 
+            src="/ava.png" 
+            alt={t("avatar")} 
+            className="w-8 h-8 rounded-full"
+          />
+          <span className="text-lg font-medium">Roger32</span>
+        </div>
+        <button className="px-6 py-2 bg-purple-600 text-white rounded-full font-medium">
+          {t("boost")}
+        </button>
+      </div>
+    </header>
   );
 };
