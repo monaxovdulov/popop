@@ -10,9 +10,9 @@ export const Router = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Root />}>
+        <Route index element={<GamePage />} />
         <Route path="shop" element={<ShopPage />} />
         <Route path="tasks" element={<TasksPage />} />
-        <Route index element={<GamePage />} />
         <Route path="friends" element={<FriendsPage />} />
         <Route path="profile" element={<Profile />} />
       </Route>
